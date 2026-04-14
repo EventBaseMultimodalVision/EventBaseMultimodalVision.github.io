@@ -61,28 +61,42 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .brand {
   font-weight: 700;
   color: var(--title);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .nav nav {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 4px;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav nav::-webkit-scrollbar {
+  display: none;
 }
 
 .nav nav a {
   color: var(--muted);
-  padding: 8px 14px;
+  padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
 .nav nav a:hover {
@@ -257,6 +271,29 @@ h3 {
   font-weight: 600;
 }
 
+.date-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.date-card {
+  padding: 16px 18px;
+}
+
+.date-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.date-value {
+  margin: 6px 0 0;
+  color: var(--title);
+  font-weight: 650;
+}
+
 .challenge-grid {
   margin-top: 28px;
   display: grid;
@@ -306,6 +343,39 @@ h3 {
 .challenge-card .dataset {
   color: var(--title);
   font-weight: 650;
+}
+
+.schedule-wrap {
+  margin-top: 22px;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.schedule-table thead th {
+  background: rgba(28, 118, 188, 0.08);
+  color: var(--title);
+  font-weight: 700;
+}
+
+.schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tbody td:first-child {
+  white-space: nowrap;
+  color: var(--title);
+  font-weight: 600;
 }
 
 .links {
@@ -462,6 +532,24 @@ h3 {
   color: #ffffff;
 }
 
+.related-list {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.related-item {
+  padding: 14px 16px;
+}
+
+.related-item a {
+  display: block;
+  color: var(--title);
+  font-weight: 600;
+}
+
 .site-footer {
   padding: 24px 0 34px;
   background: #fff;
@@ -483,6 +571,10 @@ h3 {
   }
 
   .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .date-grid {
     grid-template-columns: 1fr;
   }
 
