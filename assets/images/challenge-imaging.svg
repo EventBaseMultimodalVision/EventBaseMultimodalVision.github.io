@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <rect width="960" height="540" fill="#F4F9FC"/>
+  <text x="60" y="86" fill="#0F3557" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Low-Level Imaging</text>
+  <rect x="60" y="128" width="840" height="332" rx="18" fill="#FFFFFF" stroke="#1C76BC" stroke-opacity=".26" stroke-width="3"/>
+  <rect x="100" y="182" width="230" height="160" rx="12" fill="#E4F2FA"/>
+  <rect x="364" y="182" width="230" height="160" rx="12" fill="#D5EBF8"/>
+  <rect x="628" y="182" width="230" height="160" rx="12" fill="#C9E5F6"/>
+  <path d="M110 370C156 322 196 304 247 304C292 304 320 324 360 350C401 376 433 392 474 392C528 392 560 356 613 356C668 356 701 390 754 390C792 390 826 378 858 352" stroke="#28A7DF" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <rect width="960" height="540" fill="#F4F9FC"/>
+  <text x="60" y="86" fill="#0F3557" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Mid-Level Perception</text>
+  <rect x="60" y="128" width="840" height="332" rx="18" fill="#FFFFFF" stroke="#1C76BC" stroke-opacity=".26" stroke-width="3"/>
+  <rect x="126" y="196" width="200" height="132" rx="10" fill="#E9F4FB" stroke="#1C76BC" stroke-opacity=".4" stroke-width="2"/>
+  <rect x="380" y="172" width="200" height="180" rx="10" fill="#DDF0FA" stroke="#1C76BC" stroke-opacity=".4" stroke-width="2"/>
+  <rect x="634" y="210" width="200" height="108" rx="10" fill="#CFE9F7" stroke="#1C76BC" stroke-opacity=".4" stroke-width="2"/>
+  <circle cx="226" cy="262" r="26" fill="#28A7DF"/>
+  <circle cx="480" cy="262" r="26" fill="#1C76BC"/>
+  <circle cx="734" cy="262" r="26" fill="#0F3557"/>
+  <path d="M252 262H454M506 262H708" stroke="#0F3557" stroke-opacity=".45" stroke-width="6" stroke-linecap="round"/>
+</svg>
