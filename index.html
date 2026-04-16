@@ -1,595 +1,605 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ECCV 2026 Workshop: Event-Based Multimodal Vision: Imaging, Perception, and Understanding."
-    />
-    <title>EBMV @ ECCV 2026</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="#home">EBMV @ ECCV 2026</a>
-        <nav aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#dates">Important Dates</a>
-          <a href="#about">About</a>
-          <a href="#challenges">Challenges</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#speakers">Speakers</a>
-          <a href="#organizers">Organizers</a>
-          <a href="#sponsors">Sponsors</a>
-          <a href="#related">Related Workshops</a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ECCV 2026 Workshop: Event-Based Multimodal Vision: Imaging, Perception, and Understanding." />
+  <title>EBMV @ ECCV 2026</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">EBMV @ ECCV 2026</a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#dates">Important Dates</a>
+        <a href="#about">About</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#related">Related Workshops</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">ECCV 2026 Workshop</p>
+          <h1>Event-Based Multimodal Vision: Imaging, Perception, and Understanding</h1>
+          <p class="subtitle">
+            Imaging, Perception, and Understanding with Event-Based Multimodal Vision
+          </p>
+          <p class="meta">
+            <span>ECCV 2026</span>
+            <span>Malmo, Sweden</span>
+            <span>Sept 8-13, 2026</span>
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#challenges">Challenges</a>
+            <a class="btn btn-secondary" href="#speakers">Speakers</a>
+          </div>
+        </div>
+        <div class="hero-image-card">
+          <img src="assets/images/eccv-2026-skyline.svg" alt="ECCV 2026 workshop skyline visual" />
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">ECCV 2026 Workshop</p>
-            <h1>Event-Based Multimodal Vision: Imaging, Perception, and Understanding</h1>
-            <p class="subtitle">
-              Imaging, Perception, and Understanding with Event-Based Multimodal Vision
-            </p>
-            <p class="meta">
-              <span>ECCV 2026</span>
-              <span>Malmo, Sweden</span>
-              <span>Sept 8-13, 2026</span>
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#challenges">Challenges</a>
-              <a class="btn btn-secondary" href="#speakers">Speakers</a>
+    <section id="dates" class="section muted-bg">
+      <div class="container">
+        <h2>Important Dates</h2>
+        <p class="section-intro">
+          Tentative timeline. Exact dates will be announced after ECCV 2026 workshop schedule confirmation.
+        </p>
+        <div class="date-grid">
+          <article class="card date-card">
+            <p class="date-label">Challenge and Website Launch</p>
+            <p class="date-value">TODO (around Jan 2026)</p>
+          </article>
+          <article class="card date-card">
+            <p class="date-label">Challenge Registration Deadline</p>
+            <p class="date-value">TODO (around Mar 2026)</p>
+          </article>
+          <article class="card date-card">
+            <p class="date-label">Final Submission Deadline</p>
+            <p class="date-value">TODO (around Jun 2026)</p>
+          </article>
+          <article class="card date-card">
+            <p class="date-label">Notification and Leaderboard Freeze</p>
+            <p class="date-value">TODO (around Jul 2026)</p>
+          </article>
+          <article class="card date-card">
+            <p class="date-label">ECCV 2026 Workshop</p>
+            <p class="date-value">Sept 8-13, 2026 (exact workshop day: TODO)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p class="about-intro">
+          Our workshop focuses on research at the intersection of event-based sensing and
+          multimodal vision, spanning the full pipeline from sensing systems and low-level imaging
+          to perception and high-level understanding.
+        </p>
+
+        <div class="topic-grid">
+          <article class="card topic-card">
+            <h3>Sensing Systems</h3>
+            <ul class="topic-list">
+              <li>Event-based and neuromorphic vision with multimodal visual sensing.</li>
+              <li>Hybrid systems with event cameras, RGB, LiDAR, IMU, and language.</li>
+              <li>Datasets, simulators, benchmarks, and annotation pipelines.</li>
+              <li>Spatial-temporal calibration, synchronization, and alignment.</li>
+            </ul>
+          </article>
+
+          <article class="card topic-card">
+            <h3>Low-Level Imaging</h3>
+            <ul class="topic-list">
+              <li>Event-guided illumination modeling and brightness adjustment.</li>
+              <li>Enhancement under low-light, HDR, blur, noise, and reconstruction scenarios.</li>
+              <li>Image or intensity reconstruction and physics-aware video synthesis.</li>
+              <li>Illumination-aware representations and sensor-aware modeling.</li>
+            </ul>
+          </article>
+
+          <article class="card topic-card">
+            <h3>Mid-Level Perception</h3>
+            <ul class="topic-list">
+              <li>Optical flow, depth, visual odometry, SLAM, and 3D reconstruction.</li>
+              <li>Segmentation, detection, feature tracking, and visual tracking.</li>
+              <li>Multimodal fusion for challenging dynamic environments.</li>
+              <li>Model-based, embedded, and learning-based event-driven perception.</li>
+            </ul>
+          </article>
+
+          <article class="card topic-card">
+            <h3>High-Level Understanding</h3>
+            <ul class="topic-list">
+              <li>Visual grounding, action understanding, and spatiotemporal reasoning.</li>
+              <li>Event-based MLLMs and event-stream vision-language learning.</li>
+              <li>Autonomous driving, robotics, and embodied intelligence.</li>
+              <li>Cross-modal reasoning with asynchronous sparse event representations.</li>
+            </ul>
+          </article>
+
+          <article class="card topic-card">
+            <h3>Computing and Hardware</h3>
+            <ul class="topic-list">
+              <li>Novel event cameras, neuromorphic processors, and event-based systems.</li>
+              <li>Efficient architectures, including state-space and lightweight designs.</li>
+              <li>Sensor-aware learning grounded in event generation mechanisms.</li>
+            </ul>
+          </article>
+
+          <article class="card topic-card">
+            <h3>Applications</h3>
+            <ul class="topic-list">
+              <li>Computational imaging and industrial inspection.</li>
+              <li>Autonomous driving, robotics, AR/VR, and edge intelligence.</li>
+              <li>Deployment-oriented solutions for dynamic real-world scenarios.</li>
+            </ul>
+          </article>
+        </div>
+
+        <ul class="tags" aria-label="Workshop highlights">
+          <li>Imaging</li>
+          <li>Perception</li>
+          <li>Understanding</li>
+          <li>Event + RGB + Language</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="challenges" class="section muted-bg">
+      <div class="container">
+        <h2>Challenges</h2>
+        <p class="section-intro">
+          Each challenge now occupies one full row with a visual slot and complete link placeholders.
+        </p>
+        <div class="challenge-grid">
+          <article class="card challenge-card">
+            <div class="challenge-media">
+              <img src="assets/images/challenge-imaging.svg" alt="Low-level imaging challenge placeholder visual" />
             </div>
-          </div>
-          <div class="hero-image-card">
-            <img
-              src="assets/images/eccv-2026-skyline.svg"
-              alt="ECCV 2026 workshop skyline visual"
-            />
-          </div>
+            <div class="challenge-content">
+              <h3>Low-Level Imaging Challenge</h3>
+              <p>
+                Event-guided image reconstruction and enhancement under extreme motion and difficult
+                illumination, with multimodal fusion strategies.
+              </p>
+              <p class="dataset">Dataset: SEE 600K</p>
+              <p class="links">
+                <a href="#">Competition Page</a>
+                <a href="https://huggingface.co/datasets/yunfanlu/SEE-600K">Dataset Link</a>
+                <a href="https://github.com/yunfanLu/SEE">Baseline Code</a>
+                <a href="#">Evaluation Server</a>
+                <a href="#">Leaderboard</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card challenge-card">
+            <div class="challenge-media">
+              <img src="assets/images/challenge-perception.svg"
+                alt="Mid-level perception challenge placeholder visual" />
+            </div>
+            <div class="challenge-content">
+              <h3>Mid-Level Perception Challenge</h3>
+              <p>
+                Benchmark multimodal event-based methods for detection, segmentation, and tracking
+                in dynamic or low-light scenes.
+              </p>
+              <p class="dataset">Dataset: EBMV-Percept (placeholder)</p>
+              <p class="links">
+                <a href="#">Competition Page</a>
+                <a href="#">Dataset Link</a>
+                <a href="#">Baseline Code</a>
+                <a href="#">Evaluation Server</a>
+                <a href="#">Leaderboard</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card challenge-card">
+            <div class="challenge-media">
+              <img src="assets/images/challenge-understanding.svg"
+                alt="High-level understanding challenge placeholder visual" />
+            </div>
+            <div class="challenge-content">
+              <h3>High-Level Understanding Challenge</h3>
+              <p>
+                Evaluate event-based multimodal reasoning and language-grounded understanding with
+                interpretable outputs.
+              </p>
+              <p class="dataset">Dataset: EBMV-Understand (placeholder)</p>
+              <p class="links">
+                <a href="#">Competition Page</a>
+                <a href="#">Dataset Link</a>
+                <a href="#">Baseline Code</a>
+                <a href="#">Evaluation Server</a>
+                <a href="#">Leaderboard</a>
+              </p>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="dates" class="section muted-bg">
-        <div class="container">
-          <h2>Important Dates</h2>
-          <p class="section-intro">
-            Tentative timeline. Exact dates will be announced after ECCV 2026 workshop schedule confirmation.
-          </p>
-          <div class="date-grid">
-            <article class="card date-card">
-              <p class="date-label">Challenge and Website Launch</p>
-              <p class="date-value">TODO (around Jan 2026)</p>
-            </article>
-            <article class="card date-card">
-              <p class="date-label">Challenge Registration Deadline</p>
-              <p class="date-value">TODO (around Mar 2026)</p>
-            </article>
-            <article class="card date-card">
-              <p class="date-label">Final Submission Deadline</p>
-              <p class="date-value">TODO (around Jun 2026)</p>
-            </article>
-            <article class="card date-card">
-              <p class="date-label">Notification and Leaderboard Freeze</p>
-              <p class="date-value">TODO (around Jul 2026)</p>
-            </article>
-            <article class="card date-card">
-              <p class="date-label">ECCV 2026 Workshop</p>
-              <p class="date-value">Sept 8-13, 2026 (exact workshop day: TODO)</p>
-            </article>
-          </div>
+    <section id="schedule" class="section">
+      <div class="container">
+        <h2>Schedule</h2>
+        <p class="section-intro">
+          On-site agenda for workshop day. All slots below are placeholders and will be finalized later.
+        </p>
+        <div class="schedule-wrap card">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Session</th>
+                <th>Speaker / Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:30 - 09:00</td>
+                <td>Registration</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>09:00 - 09:15</td>
+                <td>Opening and Welcome</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>09:15 - 10:45</td>
+                <td>Invited Talks Session I</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>11:00 - 12:30</td>
+                <td>Challenge Session</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>14:00 - 15:30</td>
+                <td>Invited Talks Session II</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>15:45 - 16:45</td>
+                <td>Poster and Discussion</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>16:45 - 17:15</td>
+                <td>Awards and Closing</td>
+                <td>TODO</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <h2>About</h2>
-          <p class="about-intro">
-            Our workshop focuses on research at the intersection of event-based sensing and
-            multimodal vision, spanning the full pipeline from sensing systems and low-level imaging
-            to perception and high-level understanding.
-          </p>
+    <section id="speakers" class="section">
+      <div class="container">
+        <h2>Invited Speakers</h2>
+        <p class="section-intro">
+          Speaker lineup and topical keywords are updated according to your latest list.
+        </p>
 
-          <div class="topic-grid">
-            <article class="card topic-card">
-              <h3>Sensing Systems</h3>
-              <ul class="topic-list">
-                <li>Event-based and neuromorphic vision with multimodal visual sensing.</li>
-                <li>Hybrid systems with event cameras, RGB, LiDAR, IMU, and language.</li>
-                <li>Datasets, simulators, benchmarks, and annotation pipelines.</li>
-                <li>Spatial-temporal calibration, synchronization, and alignment.</li>
-              </ul>
-            </article>
+        <div class="speaker-list">
+          <article class="card speaker-card">
+            <img src="Vibe/KostasDaniilidis.jpeg" alt="Kostas Daniilidis portrait" />
+            <div>
+              <h3>Kostas Daniilidis</h3>
+              <p class="affiliation">UPenn, USA</p>
+              <p class="talk-title">
+                Multi-view geometry, 3D scene reconstruction, and geometric vision theory.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://www.cis.upenn.edu/~kostas/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-            <article class="card topic-card">
-              <h3>Low-Level Imaging</h3>
-              <ul class="topic-list">
-                <li>Event-guided illumination modeling and brightness adjustment.</li>
-                <li>Enhancement under low-light, HDR, blur, noise, and reconstruction scenarios.</li>
-                <li>Image or intensity reconstruction and physics-aware video synthesis.</li>
-                <li>Illumination-aware representations and sensor-aware modeling.</li>
-              </ul>
-            </article>
+          <article class="card speaker-card">
+            <img src="Vibe/GuillermoGallego.jpg" alt="Guillermo Gallego portrait" />
+            <div>
+              <h3>Guillermo Gallego</h3>
+              <p class="affiliation">TU Berlin, Germany</p>
+              <p class="talk-title">
+                Event-based vision, continuous-time motion estimation, and spatiotemporal modeling.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://sites.google.com/view/guillermogallego" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-            <article class="card topic-card">
-              <h3>Mid-Level Perception</h3>
-              <ul class="topic-list">
-                <li>Optical flow, depth, visual odometry, SLAM, and 3D reconstruction.</li>
-                <li>Segmentation, detection, feature tracking, and visual tracking.</li>
-                <li>Multimodal fusion for challenging dynamic environments.</li>
-                <li>Model-based, embedded, and learning-based event-driven perception.</li>
-              </ul>
-            </article>
+          <article class="card speaker-card">
+            <img src="Vibe/PriyadarshiniPanda.jpg" alt="Priyadarshini Panda portrait" />
+            <div>
+              <h3>Priyadarshini Panda</h3>
+              <p class="affiliation">USC, USA</p>
+              <p class="talk-title">
+                Neuromorphic computing, spiking neural networks, and event-driven learning systems.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://viterbi.usc.edu/directory/faculty/Panda/Priyadarshini" target="_blank"
+                  rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-            <article class="card topic-card">
-              <h3>High-Level Understanding</h3>
-              <ul class="topic-list">
-                <li>Visual grounding, action understanding, and spatiotemporal reasoning.</li>
-                <li>Event-based MLLMs and event-stream vision-language learning.</li>
-                <li>Autonomous driving, robotics, and embodied intelligence.</li>
-                <li>Cross-modal reasoning with asynchronous sparse event representations.</li>
-              </ul>
-            </article>
+          <article class="card speaker-card">
+            <img src="Vibe/ShintaroShiba.jpeg" alt="Shintaro Shiba portrait" />
+            <div>
+              <h3>Shintaro Shiba</h3>
+              <p class="affiliation">Woven by Toyota, Japan</p>
+              <p class="talk-title">
+                Event-based perception for autonomous driving and large-scale real-world deployment.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://scholar.google.com/citations?user=R2Jpz5kAAAAJ" target="_blank"
+                  rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-            <article class="card topic-card">
-              <h3>Computing and Hardware</h3>
-              <ul class="topic-list">
-                <li>Novel event cameras, neuromorphic processors, and event-based systems.</li>
-                <li>Efficient architectures, including state-space and lightweight designs.</li>
-                <li>Sensor-aware learning grounded in event generation mechanisms.</li>
-              </ul>
-            </article>
+          <article class="card speaker-card">
+            <img src="Vibe/LiyuanPan.jpg" alt="Liyuan Pan portrait" />
+            <div>
+              <h3>Liyuan Pan</h3>
+              <p class="affiliation">BIT, China</p>
+              <p class="talk-title">
+                Event cameras, spiking vision models, and high-speed visual perception.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://bitsslab.github.io/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-            <article class="card topic-card">
-              <h3>Applications</h3>
-              <ul class="topic-list">
-                <li>Computational imaging and industrial inspection.</li>
-                <li>Autonomous driving, robotics, AR/VR, and edge intelligence.</li>
-                <li>Deployment-oriented solutions for dynamic real-world scenarios.</li>
-              </ul>
-            </article>
-          </div>
+          <article class="card speaker-card">
+            <img src="Vibe/DanielGehrig.jpg" alt="Daniel Gehrig portrait" />
+            <div>
+              <h3>Daniel Gehrig</h3>
+              <p class="affiliation">UPenn, USA</p>
+              <p class="talk-title">
+                Event-based optical flow, learning-based motion estimation, and high-speed vision.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://danielgehrig18.github.io/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
 
-          <ul class="tags" aria-label="Workshop highlights">
-            <li>Imaging</li>
-            <li>Perception</li>
-            <li>Understanding</li>
-            <li>Event + RGB + Language</li>
-          </ul>
+          <article class="card speaker-card">
+            <img src="assets/avatars/speaker-placeholder.svg" alt="Min Liu portrait placeholder" />
+            <div>
+              <h3>Min Liu</h3>
+              <p class="affiliation">DVSense, China</p>
+              <p class="talk-title">
+                Event camera sensors, imaging hardware design, and industrial vision systems.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://www.dvsense.com/en/products_en/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card speaker-card">
+            <img src="assets/avatars/speaker-placeholder.svg" alt="Jian Deng portrait placeholder" />
+            <div>
+              <h3>Jian Deng</h3>
+              <p class="affiliation">AlpsenTek, Switzerland</p>
+              <p class="talk-title">
+                Neuromorphic vision sensors, edge imaging devices, and low-power perception hardware.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://en.alpsentek.com/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Bo Mu Director of Algorithm Development at OmniVision Technologies, Inc. San Jose, California, United States-->
+          <article class="card speaker-card">
+            <img src="assets/avatars/speaker-placeholder.svg" alt="Bo Mu portrait placeholder" />
+            <div>
+              <h3>Bo Mu</h3>
+              <p class="affiliation">OmniVision, USA</p>
+              <p class="talk-title">
+                Event-based vision applications, neuromorphic sensors, and real-world deployment.
+              </p>
+              <p class="speaker-actions">
+                <a href="https://www.ovt.com/" target="_blank" rel="noreferrer">Homepage</a>
+              </p>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="challenges" class="section muted-bg">
-        <div class="container">
-          <h2>Challenges</h2>
-          <p class="section-intro">
-            Each challenge now occupies one full row with a visual slot and complete link placeholders.
-          </p>
-          <div class="challenge-grid">
-            <article class="card challenge-card">
-              <div class="challenge-media">
-                <img
-                  src="assets/images/challenge-imaging.svg"
-                  alt="Low-level imaging challenge placeholder visual"
-                />
-              </div>
-              <div class="challenge-content">
-                <h3>Low-Level Imaging Challenge</h3>
-                <p>
-                  Event-guided image reconstruction and enhancement under extreme motion and difficult
-                  illumination, with multimodal fusion strategies.
-                </p>
-                <p class="dataset">Dataset: SEE 600K</p>
-                <p class="links">
-                  <a href="#">Competition Page</a>
-                  <a href="https://huggingface.co/datasets/yunfanlu/SEE-600K">Dataset Link</a>
-                  <a href="https://github.com/yunfanLu/SEE">Baseline Code</a>
-                  <a href="#">Evaluation Server</a>
-                  <a href="#">Leaderboard</a>
-                </p>
-              </div>
-            </article>
+    <section id="organizers" class="section organizer-bg">
+      <div class="container">
+        <h2>Organizers</h2>
+        <p class="section-intro">Organizer list and personal homepages.</p>
 
-            <article class="card challenge-card">
-              <div class="challenge-media">
-                <img
-                  src="assets/images/challenge-perception.svg"
-                  alt="Mid-level perception challenge placeholder visual"
-                />
-              </div>
-              <div class="challenge-content">
-                <h3>Mid-Level Perception Challenge</h3>
-                <p>
-                  Benchmark multimodal event-based methods for detection, segmentation, and tracking
-                  in dynamic or low-light scenes.
-                </p>
-                <p class="dataset">Dataset: EBMV-Percept (placeholder)</p>
-                <p class="links">
-                  <a href="#">Competition Page</a>
-                  <a href="#">Dataset Link</a>
-                  <a href="#">Baseline Code</a>
-                  <a href="#">Evaluation Server</a>
-                  <a href="#">Leaderboard</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card challenge-card">
-              <div class="challenge-media">
-                <img
-                  src="assets/images/challenge-understanding.svg"
-                  alt="High-level understanding challenge placeholder visual"
-                />
-              </div>
-              <div class="challenge-content">
-                <h3>High-Level Understanding Challenge</h3>
-                <p>
-                  Evaluate event-based multimodal reasoning and language-grounded understanding with
-                  interpretable outputs.
-                </p>
-                <p class="dataset">Dataset: EBMV-Understand (placeholder)</p>
-                <p class="links">
-                  <a href="#">Competition Page</a>
-                  <a href="#">Dataset Link</a>
-                  <a href="#">Baseline Code</a>
-                  <a href="#">Evaluation Server</a>
-                  <a href="#">Leaderboard</a>
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="schedule" class="section">
-        <div class="container">
-          <h2>Schedule</h2>
-          <p class="section-intro">
-            On-site agenda for workshop day. All slots below are placeholders and will be finalized later.
-          </p>
-          <div class="schedule-wrap card">
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Session</th>
-                  <th>Speaker / Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>08:30 - 09:00</td>
-                  <td>Registration</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>09:00 - 09:15</td>
-                  <td>Opening and Welcome</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>09:15 - 10:45</td>
-                  <td>Invited Talks Session I</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>11:00 - 12:30</td>
-                  <td>Challenge Session</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>14:00 - 15:30</td>
-                  <td>Invited Talks Session II</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>15:45 - 16:45</td>
-                  <td>Poster and Discussion</td>
-                  <td>TODO</td>
-                </tr>
-                <tr>
-                  <td>16:45 - 17:15</td>
-                  <td>Awards and Closing</td>
-                  <td>TODO</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section id="speakers" class="section">
-        <div class="container">
-          <h2>Invited Speakers</h2>
-          <p class="section-intro">
-            Speaker lineup and topical keywords are updated according to your latest list.
-          </p>
-
-          <div class="speaker-list">
-            <article class="card speaker-card">
-              <img src="Vibe/KostasDaniilidis.jpeg" alt="Kostas Daniilidis portrait" />
-              <div>
-                <h3>Kostas Daniilidis</h3>
-                <p class="affiliation">UPenn, USA</p>
-                <p class="talk-title">
-                  Multi-view geometry, 3D scene reconstruction, and geometric vision theory.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://www.cis.upenn.edu/~kostas/" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="Vibe/GuillermoGallego.jpg" alt="Guillermo Gallego portrait" />
-              <div>
-                <h3>Guillermo Gallego</h3>
-                <p class="affiliation">TU Berlin, Germany</p>
-                <p class="talk-title">
-                  Event-based vision, continuous-time motion estimation, and spatiotemporal modeling.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://sites.google.com/view/guillermogallego" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="Vibe/PriyadarshiniPanda.jpg" alt="Priyadarshini Panda portrait" />
-              <div>
-                <h3>Priyadarshini Panda</h3>
-                <p class="affiliation">USC, USA</p>
-                <p class="talk-title">
-                  Neuromorphic computing, spiking neural networks, and event-driven learning systems.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://viterbi.usc.edu/directory/faculty/Panda/Priyadarshini" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="Vibe/ShintaroShiba.jpeg" alt="Shintaro Shiba portrait" />
-              <div>
-                <h3>Shintaro Shiba</h3>
-                <p class="affiliation">Woven by Toyota, Japan</p>
-                <p class="talk-title">
-                  Event-based perception for autonomous driving and large-scale real-world deployment.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://scholar.google.com/citations?user=R2Jpz5kAAAAJ" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="Vibe/LiyuanPan.jpg" alt="Liyuan Pan portrait" />
-              <div>
-                <h3>Liyuan Pan</h3>
-                <p class="affiliation">BIT, China</p>
-                <p class="talk-title">
-                  Event cameras, spiking vision models, and high-speed visual perception.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://bitsslab.github.io/" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="Vibe/DanielGehrig.jpg" alt="Daniel Gehrig portrait" />
-              <div>
-                <h3>Daniel Gehrig</h3>
-                <p class="affiliation">UPenn, USA</p>
-                <p class="talk-title">
-                  Event-based optical flow, learning-based motion estimation, and high-speed vision.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://danielgehrig18.github.io/" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="assets/avatars/speaker-placeholder.svg" alt="Min Liu portrait placeholder" />
-              <div>
-                <h3>Min Liu</h3>
-                <p class="affiliation">DVSense, China</p>
-                <p class="talk-title">
-                  Event camera sensors, imaging hardware design, and industrial vision systems.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://www.dvsense.com/en/products_en/" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="card speaker-card">
-              <img src="assets/avatars/speaker-placeholder.svg" alt="Jian Deng portrait placeholder" />
-              <div>
-                <h3>Jian Deng</h3>
-                <p class="affiliation">AlpsenTek, Switzerland</p>
-                <p class="talk-title">
-                  Neuromorphic vision sensors, edge imaging devices, and low-power perception hardware.
-                </p>
-                <p class="speaker-actions">
-                  <a href="https://en.alpsentek.com/" target="_blank" rel="noreferrer">Homepage</a>
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="organizers" class="section organizer-bg">
-        <div class="container">
-          <h2>Organizers</h2>
-          <p class="section-intro">Organizer list and personal homepages.</p>
-
-          <div class="organizer-grid">
-            <article class="organizer">
-              <a href="https://hyzhouboy.github.io/" target="_blank" rel="noreferrer">
+        <div class="organizer-grid">
+          <article class="organizer">
+            <a href="https://hyzhouboy.github.io/" target="_blank" rel="noreferrer">
               <img src="Vibe/HanyuZhou.jpg" alt="Hanyu Zhou portrait" />
               <p class="organizer-name">Hanyu Zhou</p>
               <p class="organizer-affiliation">National University of Singapore</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://yunfanlu.github.io/" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://yunfanlu.github.io/" target="_blank" rel="noreferrer">
               <img src="Vibe/YunfanLu.jpeg" alt="Yunfan Lu portrait" />
               <p class="organizer-name">Yunfan Lu</p>
               <p class="organizer-affiliation">Hong Kong University of Science and Technology (Guangzhou)</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://xdusyl.github.io/" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://xdusyl.github.io/" target="_blank" rel="noreferrer">
               <img src="Vibe/ShaoyuLiu.png" alt="Shaoyu Liu portrait" />
               <p class="organizer-name">Shaoyu Liu</p>
               <p class="organizer-affiliation">Xidian University</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://scholar.google.com/citations?user=DadbHdAAAAAJ" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://scholar.google.com/citations?user=DadbHdAAAAAJ" target="_blank" rel="noreferrer">
               <img src="Vibe/HaoyueLiu.jpg" alt="Haoyue Liu portrait placeholder" />
               <p class="organizer-name">Haoyue Liu</p>
               <p class="organizer-affiliation"> Huazhong University of Science and Technology</p>
-              </a>
-            </article>
+            </a>
+          </article>
 
-            <article class="organizer">
-              <a href="https://scholar.google.com/citations?user=VqF8ZNYAAAAJ" target="_blank" rel="noreferrer">
+          <article class="organizer">
+            <a href="https://scholar.google.com/citations?user=VqF8ZNYAAAAJ" target="_blank" rel="noreferrer">
               <img src="Vibe/PeiqiDuan.jpeg" alt="Peiqi Duan portrait" />
               <p class="organizer-name">Peiqi Duan</p>
               <p class="organizer-affiliation">Peking University</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://pengshihan.com/" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://pengshihan.com/" target="_blank" rel="noreferrer">
               <img src="Vibe/ShihanPeng.png" alt="Shihan Peng portrait placeholder" />
               <p class="organizer-name">Shihan Peng</p>
               <p class="organizer-affiliation">Huazhong University of Science and Technology</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://scholar.google.com/citations?user=JD-5DKcAAAAJ" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://scholar.google.com/citations?user=JD-5DKcAAAAJ" target="_blank" rel="noreferrer">
               <img src="Vibe/YinqiangZheng.jpeg" alt="Yinqiang Zheng portrait" />
               <p class="organizer-name">Yinqiang Zheng</p>
               <p class="organizer-affiliation">University of Tokyo</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="http://camera.pku.edu.cn/" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="http://camera.pku.edu.cn/" target="_blank" rel="noreferrer">
               <img src="Vibe/BoxinShi.jpeg" alt="Boxin Shi portrait" />
               <p class="organizer-name">Boxin Shi</p>
               <p class="organizer-affiliation">Peking University</p>
-              </a>
-            </article>
+            </a>
+          </article>
 
-            <article class="organizer">
-              <a href="https://vi.kaist.ac.kr/" target="_blank" rel="noreferrer">
+          <article class="organizer">
+            <a href="https://vi.kaist.ac.kr/" target="_blank" rel="noreferrer">
               <img src="Vibe/KukJinYoon.jpeg" alt="Kuk-Jin Yoon portrait" />
               <p class="organizer-name">Kuk-Jin Yoon</p>
               <p class="organizer-affiliation">KAIST</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://www.nature.com/npjai/editors" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://www.nature.com/npjai/editors" target="_blank" rel="noreferrer">
               <img src="Vibe/HuiXiong.jpeg" alt="Hui Xiong portrait" />
               <p class="organizer-name">Hui Xiong</p>
               <p class="organizer-affiliation">Hong Kong University of Science and Technology (Guangzhou)</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="https://www.comp.nus.edu.sg/~leegh/" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="https://www.comp.nus.edu.sg/~leegh/" target="_blank" rel="noreferrer">
               <img src="Vibe/GimHeeLee.jpeg" alt="Gim Hee Lee portrait" />
               <p class="organizer-name">Gim Hee Lee</p>
               <p class="organizer-affiliation">National University of Singapore</p>
-              </a>
-            </article>
-            <article class="organizer">
-              <a href="http://rpg.ifi.uzh.ch/people_scaramuzza.html" target="_blank" rel="noreferrer">
+            </a>
+          </article>
+          <article class="organizer">
+            <a href="http://rpg.ifi.uzh.ch/people_scaramuzza.html" target="_blank" rel="noreferrer">
               <img src="Vibe/DavideScaramuzza.jpeg" alt="Davide Scaramuzza portrait" />
               <p class="organizer-name">Davide Scaramuzza</p>
               <p class="organizer-affiliation">University of Zurich</p>
-              </a>
-            </article>
-          </div>
+            </a>
+          </article>
         </div>
-      </section>
-
-      <section id="sponsors" class="section">
-        <div class="container">
-          <h2>Sponsors</h2>
-          <p class="section-intro">Industry sponsors supporting the workshop.</p>
-          <div class="sponsor-grid">
-            <article class="card sponsor-card sponsor-dark">
-              <a href="https://www.dvsense.com/en/home_en/" target="_blank" rel="noreferrer">
-                <img
-                  src="Vibe/Dvsense-logo_white-logo-ppt-145x52-1.png"
-                  alt="DVSense logo"
-                />
-                <p>DVSense</p>
-              </a>
-            </article>
-            <article class="card sponsor-card">
-              <a href="https://en.alpsentek.com/" target="_blank" rel="noreferrer">
-                <img src="Vibe/AlpsenTek.svg" alt="AlpsenTek logo" />
-                <p>AlpsenTek</p>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="related" class="section muted-bg">
-        <div class="container">
-          <h2>Related Workshops</h2>
-          <p class="section-intro">
-            We acknowledge prior and ongoing community efforts in event-based and neuromorphic vision.
-          </p>
-          <ul class="related-list">
-              <a href="https://tub-rip.github.io/eventvision2023/" target="_blank" rel="noreferrer">
-                CVPR 2023 Fourth International Workshop on Event-based Vision
-              </a>
-              <a href="https://tub-rip.github.io/eventvision2021/" target="_blank" rel="noreferrer">
-                CVPR 2021 Third International Workshop on Event-based Vision
-              </a>
-              <a href="http://rpg.ifi.uzh.ch/CVPR19_event_vision_workshop.html" target="_blank" rel="noreferrer">
-                CVPR 2019 Second International Workshop on Event-based Vision
-              </a>
-              <a href="http://rpg.ifi.uzh.ch/ICRA17_event_vision_workshop.html" target="_blank" rel="noreferrer">
-                ICRA 2017 First International Workshop on Event-based Vision
-              </a>
-              <a href="https://sites.google.com/view/nevi-2025/home-page" target="_blank" rel="noreferrer">
-                ICCV 2025: 2nd Workshop on Neuromorphic Vision (NeVi 2025)
-              </a>
-              <a href="https://sites.google.com/view/neurobots2025" target="_blank" rel="noreferrer">
-                IROS 2025: NeuRobots 2025 - Workshop on Neuromorphic Perception for Real World Robotics
-              </a>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Event-Based Multimodal Vision Workshop @ ECCV 2026</p>
-        <p>
-          <span class="contact-info">
-            <span class="contact-label">Contact:</span>
-            <a href="mailto:hy.zhou@nus.edu.sg">hy.zhou@nus.edu.sg</a>
-            <span class="contact-separator">•</span>
-            <a href="mailto:ylu066@connect.hkust-gz.edu.cn">ylu066@connect.hkust-gz.edu.cn</a>
-          </span>
-          <a href="https://github.com/EventBaseMultimodalVision" target="_blank" rel="noreferrer">GitHub</a>
-        </p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="sponsors" class="section">
+      <div class="container">
+        <h2>Sponsors</h2>
+        <p class="section-intro">Industry sponsors supporting the workshop.</p>
+        <div class="sponsor-grid">
+          <article class="card sponsor-card sponsor-dark">
+            <a href="https://www.dvsense.com/en/home_en/" target="_blank" rel="noreferrer">
+              <img src="Vibe/Dvsense-logo_white-logo-ppt-145x52-1.png" alt="DVSense logo" />
+              <p>DVSense</p>
+            </a>
+          </article>
+          <article class="card sponsor-card">
+            <a href="https://en.alpsentek.com/" target="_blank" rel="noreferrer">
+              <img src="Vibe/AlpsenTek.svg" alt="AlpsenTek logo" />
+              <p>AlpsenTek</p>
+            </a>
+          </article>
+          <article class="card sponsor-card sponsor-dark">
+            <a href="https://www.ovt.com/" target="_blank" rel="noreferrer">
+              <img src="Vibe/OMNIVISION.svg" alt="OmniVision logo" />
+              <p>OmniVision</p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="related" class="section muted-bg">
+      <div class="container">
+        <h2>Related Workshops</h2>
+        <p class="section-intro">
+          We acknowledge prior and ongoing community efforts in event-based and neuromorphic vision.
+        </p>
+        <ul class="related-list">
+          <a href="https://tub-rip.github.io/eventvision2023/" target="_blank" rel="noreferrer">
+            CVPR 2023 Fourth International Workshop on Event-based Vision
+          </a>
+          <a href="https://tub-rip.github.io/eventvision2021/" target="_blank" rel="noreferrer">
+            CVPR 2021 Third International Workshop on Event-based Vision
+          </a>
+          <a href="http://rpg.ifi.uzh.ch/CVPR19_event_vision_workshop.html" target="_blank" rel="noreferrer">
+            CVPR 2019 Second International Workshop on Event-based Vision
+          </a>
+          <a href="http://rpg.ifi.uzh.ch/ICRA17_event_vision_workshop.html" target="_blank" rel="noreferrer">
+            ICRA 2017 First International Workshop on Event-based Vision
+          </a>
+          <a href="https://sites.google.com/view/nevi-2025/home-page" target="_blank" rel="noreferrer">
+            ICCV 2025: 2nd Workshop on Neuromorphic Vision (NeVi 2025)
+          </a>
+          <a href="https://sites.google.com/view/neurobots2025" target="_blank" rel="noreferrer">
+            IROS 2025: NeuRobots 2025 - Workshop on Neuromorphic Perception for Real World Robotics
+          </a>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Event-Based Multimodal Vision Workshop @ ECCV 2026</p>
+      <p>
+        <span class="contact-info">
+          <span class="contact-label">Contact:</span>
+          <a href="mailto:hy.zhou@nus.edu.sg">hy.zhou@nus.edu.sg</a>
+          <span class="contact-separator">•</span>
+          <a href="mailto:ylu066@connect.hkust-gz.edu.cn">ylu066@connect.hkust-gz.edu.cn</a>
+        </span>
+        <a href="https://github.com/EventBaseMultimodalVision" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
