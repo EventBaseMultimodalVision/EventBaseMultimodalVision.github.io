@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="SEE Challenge 2026: Event-Guided Low-Level Imaging for broad-light brightness adjustment with RGB frames and events." />
+  <title>SEE Challenge 2026 | EBMV @ ECCV 2026</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    :root {
+      --see-cyan: #18b7d8;
+      --see-gold: #f5bd2f;
+      --see-ink: #0b2d4a;
+    }
+
+    .challenge-hero {
+      padding: 52px 0 44px;
+      background:
+        linear-gradient(120deg, rgba(15, 53, 87, 0.96), rgba(16, 94, 136, 0.9)),
+        radial-gradient(circle at 78% 22%, rgba(245, 189, 47, 0.2), transparent 34%);
+      color: #fff;
+    }
+
+    .challenge-hero h1,
+    .challenge-hero .subtitle,
+    .challenge-hero .eyebrow {
+      color: #fff;
+    }
+
+    .challenge-hero .eyebrow {
+      color: #8ee7f6;
+    }
+
+    .challenge-hero .subtitle,
+    .hero-summary {
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero-summary {
+      margin: 16px 0 0;
+      font-size: 1.02rem;
+    }
+
+    .challenge-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.85fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-panel {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 34px rgba(4, 23, 39, 0.2);
+    }
+
+    .hero-panel img {
+      width: 100%;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .hero-stats,
+    .quick-grid,
+    .visual-grid,
+    .split-grid,
+    .timeline,
+    .link-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-stats {
+      margin-top: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-stat-label {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-stat-value {
+      margin: 3px 0 0;
+      color: #fff;
+      font-weight: 750;
+    }
+
+    .challenge-hero .btn-primary {
+      background: var(--see-gold);
+      color: var(--see-ink);
+    }
+
+    .challenge-hero .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .quick-grid {
+      margin-top: 22px;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .quick-card,
+    .visual-card,
+    .guide-card,
+    .citation-card,
+    .contact-card {
+      padding: 18px;
+    }
+
+    .quick-value {
+      margin: 0;
+      color: var(--title);
+      font-size: 1.32rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .quick-label {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .visual-grid {
+      margin-top: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .visual-card figure {
+      margin: 0;
+    }
+
+    .visual-card img {
+      width: 100%;
+      max-height: 420px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      object-fit: contain;
+    }
+
+    .visual-card figcaption {
+      margin-top: 12px;
+      color: var(--title);
+      font-weight: 700;
+    }
+
+    .visual-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .split-grid {
+      margin-top: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .guide-card ul,
+    .rule-list {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .guide-card li + li,
+    .rule-list li + li {
+      margin-top: 7px;
+    }
+
+    .table-wrap {
+      margin-top: 18px;
+      overflow-x: auto;
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compact-table th,
+    .compact-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .compact-table th {
+      color: var(--title);
+      background: rgba(28, 118, 188, 0.08);
+    }
+
+    .compact-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .code-block,
+    .bibtex-code {
+      margin: 14px 0 0;
+      padding: 16px;
+      border-radius: 14px;
+      overflow-x: auto;
+      color: #d9f4ff;
+      background: #09243a;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .timeline {
+      margin-top: 24px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .timeline-item {
+      padding: 16px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin-bottom: 11px;
+      border-radius: 50%;
+      background: var(--see-gold);
+      box-shadow: 0 0 0 5px rgba(245, 189, 47, 0.18);
+    }
+
+    .timeline-date {
+      margin: 0;
+      color: var(--title);
+      font-weight: 750;
+    }
+
+    .timeline-label {
+      margin: 7px 0 0;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .link-grid {
+      margin-top: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .resource-link {
+      padding: 16px;
+      border: 1px solid rgba(28, 118, 188, 0.2);
+      border-radius: 14px;
+      background: rgba(28, 118, 188, 0.06);
+      color: var(--title);
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .resource-link:hover {
+      transform: translateY(-1px);
+      color: var(--primary);
+    }
+
+    .resource-link span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.92rem;
+    }
+
+    .contact-card {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-card strong {
+      color: var(--title);
+    }
+
+    @media (max-width: 1100px) {
+      .quick-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .timeline,
+      .link-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .challenge-hero-grid,
+      .visual-grid,
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .challenge-hero {
+        padding: 42px 0 38px;
+      }
+
+      .quick-grid,
+      .timeline,
+      .link-grid,
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html#home">EBMV @ ECCV 2026</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#dates">Important Dates</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#challenges">Challenges</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="index.html#organizers">Organizers</a>
+        <a href="index.html#related">Related Workshops</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="challenge-hero">
+      <div class="container challenge-hero-grid">
+        <div>
+          <p class="eyebrow">Broad-Light Adaptive Brightness Adjustment</p>
+          <h1>SEE Challenge 2026</h1>
+          <p class="subtitle">Event-Guided Low-Level Imaging</p>
+          <p class="hero-summary">
+            RGB + events for brightness-adjusted RGB restoration under low light, over-exposure, mixed illumination,
+            high contrast, and motion.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://www.codabench.org/competitions/16195/#/pages-tab" target="_blank"
+              rel="noreferrer">Competition Page</a>
+            <a class="btn btn-secondary" href="https://huggingface.co/datasets/yunfanlu/SEE-600K" target="_blank"
+              rel="noreferrer">Dataset</a>
+            <a class="btn btn-secondary" href="https://github.com/yunfanLu/SEE" target="_blank"
+              rel="noreferrer">Code</a>
+            <a class="btn btn-secondary" href="https://github.com/yunfanLu/SEE/blob/main/TUTORIAL.md" target="_blank"
+              rel="noreferrer">Tutorial</a>
+            <a class="btn btn-secondary" href="https://www.codabench.org/competitions/16195/#/participate-tab"
+              target="_blank" rel="noreferrer">Submit</a>
+            <a class="btn btn-secondary" href="https://www.codabench.org/competitions/16195/#/results-tab"
+              target="_blank" rel="noreferrer">Leaderboard</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="SEE Challenge highlights">
+          <img src="assets/images/SEE-logo.jpg" alt="SEE Challenge logo" />
+          <div class="hero-stats">
+            <div>
+              <p class="hero-stat-label">Dataset</p>
+              <p class="hero-stat-value">SEE-600K</p>
+            </div>
+            <div>
+              <p class="hero-stat-label">Track</p>
+              <p class="hero-stat-value">Low-Level Imaging</p>
+            </div>
+            <div>
+              <p class="hero-stat-label">Input</p>
+              <p class="hero-stat-value">RGB + Events</p>
+            </div>
+            <div>
+              <p class="hero-stat-label">Rank</p>
+              <p class="hero-stat-value">PSNR</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>At a Glance</h2>
+        <div class="quick-grid">
+          <article class="card quick-card">
+            <p class="quick-value">610K+</p>
+            <p class="quick-label">RGB images with event data</p>
+          </article>
+          <article class="card quick-card">
+            <p class="quick-value">202</p>
+            <p class="quick-label">real-world scenarios</p>
+          </article>
+          <article class="card quick-card">
+            <p class="quick-value">&gt;1000x</p>
+            <p class="quick-label">illumination variation</p>
+          </article>
+          <article class="card quick-card">
+            <p class="quick-value">3</p>
+            <p class="quick-label">low / normal / high light</p>
+          </article>
+          <article class="card quick-card">
+            <p class="quick-value">4</p>
+            <p class="quick-label">lighting groups per scene on average</p>
+          </article>
+          <article class="card quick-card">
+            <p class="quick-value">1.9M</p>
+            <p class="quick-label">SEE-Net baseline parameters</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-bg">
+      <div class="container">
+        <h2>Challenge Visuals</h2>
+        <div class="visual-grid">
+          <article class="card visual-card">
+            <figure>
+              <img src="Vibe/see/2-Problem-Define.jpg"
+                alt="SEE challenge task definition with challenging input, event guidance, and restored output" />
+              <figcaption>Problem Definition</figcaption>
+            </figure>
+            <p>Input RGB under challenging illumination + event representation -> brightness-adjusted RGB output.</p>
+          </article>
+
+          <article class="card visual-card">
+            <figure>
+              <img src="Vibe/see/0-Dataset-Sample.jpg"
+                alt="SEE-600K dataset samples under low, normal, and high lighting conditions" />
+              <figcaption>Dataset Samples</figcaption>
+            </figure>
+            <p>Examples cover low-light, normal-light, high-light, mixed illumination, and event views.</p>
+          </article>
+
+          <article class="card visual-card">
+            <figure>
+              <img src="Vibe/see/1-MoreExamples-WordCloud.jpg"
+                alt="SEE-600K scene examples and scenario word cloud" />
+              <figcaption>Scenario Coverage</figcaption>
+            </figure>
+            <p>202 real-world scenarios with broad scene categories and multiple lighting groups.</p>
+          </article>
+
+          <article class="card visual-card">
+            <figure>
+              <img src="Vibe/see/3-BaseLine-Release.jpg"
+                alt="SEE baseline visualization results produced by the released code" />
+              <figcaption>Baseline Visualization</figcaption>
+            </figure>
+            <p>SEE-Net uses RGB frames, event data, and a brightness prompt for controllable output exposure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Task &amp; Evaluation</h2>
+        <div class="split-grid">
+          <article class="card guide-card">
+            <h3>Task</h3>
+            <div class="table-wrap">
+              <table class="compact-table">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <td>Challenging RGB image, event stream / voxel, optional brightness prompt.</td>
+                  </tr>
+                  <tr>
+                    <th>Output</th>
+                    <td>Brightness-adjusted RGB image matching the input sample ID and resolution.</td>
+                  </tr>
+                  <tr>
+                    <th>Goal</th>
+                    <td>Well-exposed, detailed, structurally faithful, naturally colored result.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="card guide-card">
+            <h3>Metrics</h3>
+            <div class="table-wrap">
+              <table class="compact-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Role</th>
+                    <th>Better</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PSNR</td>
+                    <td>Primary ranking</td>
+                    <td>Higher</td>
+                  </tr>
+                  <tr>
+                    <td>SSIM</td>
+                    <td>Structure</td>
+                    <td>Higher</td>
+                  </tr>
+                  <tr>
+                    <td>LPIPS</td>
+                    <td>Perception</td>
+                    <td>Lower</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-bg">
+      <div class="container">
+        <h2>Getting Started</h2>
+        <div class="split-grid">
+          <article class="card guide-card">
+            <h3>Code Guide</h3>
+            <div class="table-wrap">
+              <table class="compact-table">
+                <tbody>
+                  <tr>
+                    <th>1. Data</th>
+                    <td>Download SEE-600K from Hugging Face. The Hugging Face release is aligned and ready to use.</td>
+                  </tr>
+                  <tr>
+                    <th>2. Setup</th>
+                    <td>Clone SEE, create a Python 3.10 environment, then install <code>requirements.txt</code>.</td>
+                  </tr>
+                  <tr>
+                    <th>3. Train</th>
+                    <td>Edit <code>DATASET.root</code> in <code>options/SEE/SEENet_SEE.yaml</code>, then run SEE-Net.</td>
+                  </tr>
+                  <tr>
+                    <th>4. Test</th>
+                    <td>Use <code>--TEST_ONLY=True</code> and <code>--VISUALIZE=True</code> to save validation outputs.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://github.com/yunfanLu/SEE/blob/main/TUTORIAL.md" target="_blank"
+                rel="noreferrer">Read Tutorial</a>
+              <a class="btn btn-secondary" href="https://github.com/yunfanLu/SEE" target="_blank"
+                rel="noreferrer">Open Code</a>
+            </div>
+          </article>
+
+          <article class="card guide-card">
+            <h3>Minimal Commands</h3>
+            <pre class="code-block"><code>git clone https://github.com/yunfanLu/SEE.git
+cd SEE
+conda create -n see python=3.10 -y
+conda activate see
+pip install -r requirements.txt
+
+export PYTHONPATH="./":$PYTHONPATH
+python see/main.py \
+  --yaml_file="options/SEE/SEENet_SEE.yaml" \
+  --log_dir="./logs/SEE/SEENet_SEE/" \
+  --alsologtostderr=True</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Submission</h2>
+        <div class="split-grid">
+          <article class="card guide-card">
+            <h3>ZIP Structure</h3>
+            <pre class="code-block"><code>submission.zip
+`-- results/
+    |-- scene_000001.png
+    |-- scene_000002.png
+    |-- scene_000003.png
+    `-- ...</code></pre>
+          </article>
+
+          <article class="card guide-card">
+            <h3>Checklist</h3>
+            <ul>
+              <li>Filenames match input sample IDs.</li>
+              <li>Images are RGB PNG files.</li>
+              <li>Resolution matches input / reference resolution.</li>
+              <li>Folder structure remains unchanged.</li>
+              <li>No hidden test ground truth or manual test-set tuning.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-bg">
+      <div class="container">
+        <h2>Timeline</h2>
+        <div class="timeline">
+          <article class="card timeline-item">
+            <p class="timeline-date">May 10, 2026</p>
+            <p class="timeline-label">Challenge website opens</p>
+          </article>
+          <article class="card timeline-item">
+            <p class="timeline-date">May 15, 2026</p>
+            <p class="timeline-label">Validation server online</p>
+          </article>
+          <article class="card timeline-item">
+            <p class="timeline-date">June 25, 2026</p>
+            <p class="timeline-label">Test data and server online</p>
+          </article>
+          <article class="card timeline-item">
+            <p class="timeline-date">July 3, 2026</p>
+            <p class="timeline-label">Final submission deadline</p>
+          </article>
+          <article class="card timeline-item">
+            <p class="timeline-date">July 10, 2026</p>
+            <p class="timeline-label">Results announcement</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Rules &amp; Links</h2>
+        <div class="split-grid">
+          <article class="card guide-card">
+            <h3>Rules</h3>
+            <ul class="rule-list">
+              <li>Use of SEE-600K is encouraged.</li>
+              <li>External data, pretrained models, and synthetic data are allowed if disclosed.</li>
+              <li>Hidden test ground truth must not be used.</li>
+              <li>Top teams may be asked for a technical report or code for verification.</li>
+            </ul>
+          </article>
+
+          <article class="card guide-card">
+            <h3>Resources</h3>
+            <div class="link-grid">
+              <a class="resource-link" href="https://www.codabench.org/competitions/16195/#/pages-tab"
+                target="_blank" rel="noreferrer">Competition<span>Codabench page</span></a>
+              <a class="resource-link" href="https://www.codabench.org/competitions/16195/#/participate-tab"
+                target="_blank" rel="noreferrer">Evaluation<span>Submit results</span></a>
+              <a class="resource-link" href="https://www.codabench.org/competitions/16195/#/results-tab"
+                target="_blank" rel="noreferrer">Leaderboard<span>Ranked by PSNR</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-bg">
+      <div class="container">
+        <h2>Citation</h2>
+        <article class="card citation-card">
+          <h3>SEE: See Everything Every Time - Adaptive Brightness Adjustment for Broad Light Range Images via Events</h3>
+          <pre class="bibtex-code"><code>@article{lu2025SEE,
+  title={SEE: See Everything Every Time - Adaptive Brightness Adjustment for Broad Light Range Images via Events},
+  author={Yunfan Lu, Xiaogang Xu, Hao Lu, Yanlin Qian, Pengteng Li, Huizai Yao, Bin Yang, Junyi Li, Qianyi Cai, Weiyu Guo, Hui Xiong},
+  year={2025},
+}</code></pre>
+        </article>
+
+        <div class="card contact-card">
+          <p><strong>Contact:</strong> Yunfan Lu</p>
+          <p><a href="mailto:ylu066@connect.hkust-gz.edu.cn">ylu066@connect.hkust-gz.edu.cn</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Event-Based Multimodal Vision Workshop @ ECCV 2026</p>
+      <p>
+        <span class="contact-info">
+          <span class="contact-label">Contact:</span>
+          <a href="mailto:hy.zhou@nus.edu.sg">hy.zhou@nus.edu.sg</a>
+          <span class="contact-separator">•</span>
+          <a href="mailto:ylu066@connect.hkust-gz.edu.cn">ylu066@connect.hkust-gz.edu.cn</a>
+        </span>
+        <a href="https://github.com/EventBaseMultimodalVision" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
