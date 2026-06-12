@@ -8,6 +8,164 @@
     content="ECCV 2026 Workshop: Event-Based Multimodal Vision: Imaging, Perception, and Understanding." />
   <title>EBMV @ ECCV 2026</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .submission-requirements {
+      margin-top: 56px;
+      padding: clamp(24px, 4vw, 42px);
+      border: 1px solid rgba(28, 118, 188, 0.18);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top right, rgba(40, 167, 223, 0.14), transparent 34%),
+        linear-gradient(145deg, #f7fbfe 0%, #ffffff 62%);
+      box-shadow: 0 20px 44px rgba(15, 53, 87, 0.09);
+      scroll-margin-top: 96px;
+    }
+
+    .submission-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .submission-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .submission-template {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .submission-template strong {
+      color: var(--title);
+    }
+
+    .submission-template a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .submission-tracks {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .submission-track {
+      position: relative;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .submission-track::before {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      content: "";
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+    }
+
+    .track-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-left: 4px;
+    }
+
+    .page-badge {
+      flex: 0 0 auto;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--title);
+      color: #fff;
+      font-size: 0.86rem;
+      font-weight: 750;
+      letter-spacing: 0.01em;
+    }
+
+    .track-summary {
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
+
+    .track-highlights {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .track-highlights li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--text);
+    }
+
+    .track-highlights li::before {
+      position: absolute;
+      top: 0.68em;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      content: "";
+      background: var(--secondary);
+      box-shadow: 0 0 0 4px rgba(40, 167, 223, 0.12);
+    }
+
+    .review-panel {
+      margin-top: 18px;
+      padding: 22px 24px;
+      border: 1px solid rgba(28, 118, 188, 0.16);
+      border-radius: var(--radius-md);
+      background: rgba(28, 118, 188, 0.055);
+    }
+
+    .review-panel p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .review-criteria {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .review-criteria li {
+      padding: 7px 12px;
+      border: 1px solid rgba(28, 118, 188, 0.2);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--title);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    @media (max-width: 820px) {
+      .submission-tracks {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .track-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -18,6 +176,7 @@
         <a href="#home">Home</a>
         <a href="#dates">Important Dates</a>
         <a href="#about">About</a>
+        <a href="#submissions">Submissions</a>
         <a href="#challenges">Challenges</a>
         <a href="#schedule">Schedule</a>
         <a href="#speakers">Speakers</a>
@@ -198,6 +357,93 @@
           <li>Understanding</li>
           <li>Event + RGB + Language</li>
         </ul>
+
+        <div id="submissions" class="submission-requirements">
+          <div class="submission-heading">
+            <div>
+              <p class="eyebrow">Call for Papers</p>
+              <h2>Submission Format</h2>
+            </div>
+            <p class="submission-template">
+              All submissions must follow the
+              <strong>ECCV 2026 official paper template and formatting guidelines</strong>.
+              <a href="https://eccv.ecva.net/Conferences/2026/SubmissionPolicies" target="_blank"
+                rel="noreferrer">View the official submission policies</a>.
+            </p>
+          </div>
+
+          <div class="submission-tracks">
+            <article class="card submission-track">
+              <div class="track-header">
+                <h3>Full Paper Track</h3>
+                <span class="page-badge">8&ndash;14 pages</span>
+              </div>
+              <p class="track-summary">
+                For substantial, original research contributions with a complete technical and
+                experimental presentation. References are excluded from the page limit.
+              </p>
+              <ul class="track-highlights">
+                <li>
+                  Welcomes original research, benchmarks, systems, datasets, and
+                  application-oriented work related to the workshop themes.
+                </li>
+                <li>
+                  Open to the broader research community and <strong>not limited to challenge
+                    participants</strong>.
+                </li>
+                <li>
+                  Relevant areas include event-based vision, multimodal perception, foundation
+                  models, embodied AI, robotics, and related topics.
+                </li>
+                <li>
+                  Submissions should provide clear technical contributions, sufficient
+                  experimental validation, and a complete discussion of the proposed study.
+                </li>
+              </ul>
+            </article>
+
+            <article class="card submission-track">
+              <div class="track-header">
+                <h3>Technical Report Track</h3>
+                <span class="page-badge">4&ndash;6 pages</span>
+              </div>
+              <p class="track-summary">
+                For concise technical contributions, especially workshop challenge solutions.
+                References are excluded from the page limit.
+              </p>
+              <ul class="track-highlights">
+                <li>
+                  Primarily intended for challenge participants, while remaining open to other
+                  focused technical contributions.
+                </li>
+                <li>
+                  Suitable for challenge solutions, system designs, implementation details,
+                  practical insights, preliminary methods, and technical findings.
+                </li>
+                <li>
+                  Reports should clearly describe the proposed approach and present all available
+                  evaluation results.
+                </li>
+                <li>
+                  Comprehensive validation, extensive ablations, and complete theoretical analysis
+                  are <strong>not required to match the level expected of Full Papers</strong>.
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="review-panel">
+            <h3>Review Process</h3>
+            <p>
+              All submissions will undergo peer review by the Workshop Program Committee.
+              Submissions will be assessed according to the selected track and the following
+              criteria:
+              Workshop Relevance,
+              Technical Quality,
+              Clarity of Presentation,
+              Track Appropriateness.
+          </div>
+        </div>
       </div>
     </section>
 
