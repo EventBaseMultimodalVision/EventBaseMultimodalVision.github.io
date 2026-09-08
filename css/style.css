@@ -170,6 +170,14 @@ h3 {
   color: var(--title);
 }
 
+.meta .meta-room {
+  border-color: rgba(15, 53, 87, 0.18);
+  background: linear-gradient(135deg, rgba(198, 160, 82, 0.2), rgba(198, 160, 82, 0.1));
+  color: var(--title);
+  font-weight: 700;
+  box-shadow: 0 16px 30px rgba(15, 53, 87, 0.1);
+}
+
 .actions {
   margin-top: 24px;
   display: flex;
