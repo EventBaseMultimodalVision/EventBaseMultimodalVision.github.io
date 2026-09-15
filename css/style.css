@@ -378,6 +378,55 @@ h3 {
   padding: 16px 18px;
 }
 
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.archive-badge {
+  margin: 0;
+  padding: 8px 13px;
+  border: 1px solid rgba(34, 126, 91, 0.22);
+  border-radius: 999px;
+  background: rgba(34, 126, 91, 0.09);
+  color: #176849;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.workshop-moments {
+  padding-top: 28px;
+}
+
+.photo-gallery-link {
+  flex: 0 0 auto;
+}
+
+.workshop-group-photo {
+  margin: 24px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.workshop-group-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.workshop-group-photo figcaption {
+  margin: 0;
+  padding: 14px 20px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .date-label {
   margin: 0;
   color: var(--muted);
@@ -521,11 +570,49 @@ h3 {
   margin: 10px 0 0;
 }
 
+.talk-label {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(198, 160, 82, 0.18);
+  color: var(--title);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
 .speaker-actions {
   margin: 12px 0 0;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.slides-link,
+.schedule-slides {
+  border-color: rgba(198, 160, 82, 0.42) !important;
+  background: rgba(198, 160, 82, 0.13) !important;
+}
+
+.schedule-talk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.schedule-slides {
+  display: inline-block;
+  padding: 4px 9px;
+  border: 1px solid;
+  border-radius: 999px;
+  color: var(--title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .organizer-grid {
