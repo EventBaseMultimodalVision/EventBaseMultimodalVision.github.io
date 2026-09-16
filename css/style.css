@@ -294,12 +294,30 @@ h3 {
   white-space: nowrap;
 }
 
+.hero-visuals {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
+
 .hero-image-card {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 18px;
   background: linear-gradient(180deg, rgba(244, 249, 252, 0.9), #ffffff);
   box-shadow: var(--shadow);
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 380px;
+  justify-self: center;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .section {
