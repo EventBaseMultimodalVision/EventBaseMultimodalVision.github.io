@@ -112,7 +112,7 @@ a:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 7fr 3fr;
   gap: 28px;
   align-items: center;
 }
@@ -296,26 +296,14 @@ h3 {
 
 .hero-visuals {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
   width: 100%;
   min-width: 0;
 }
 
-.hero-image-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 18px;
-  background: linear-gradient(180deg, rgba(244, 249, 252, 0.9), #ffffff);
-  box-shadow: var(--shadow);
-}
-
-.hero-logo {
-  width: 100%;
-  max-width: 380px;
-  justify-self: center;
-}
-
-.hero-logo img {
+.hero-logo img,
+.hero-image-card img {
   width: 100%;
   height: auto;
 }
